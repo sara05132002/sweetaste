@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Document</title>
+	<script src="https://kit.fontawesome.com/094337ecc6.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		*{
+			vertical-align: baseline;
+		}
+		.logo{
+			height: 50px;
+			width: 220px;
+			font-size: 30px;
+		}
+		.a-img{
+			width: 100%;
+		}
+		.navlogo-img{
+			width: 220px;
+			height: 50px;
+		}
+		.nav-item{
+			
+			font-size: 16px;
+			margin: 0 20px;
+		}
+		.menu-cart-icon{
+			align-items: center;
+			font-size: 24px;
+			color: #3F5D45;
+			position: absolute;
+			right: 10px;
+		}
+		
+		.nav-link{
+			color: rgba(63, 93, 69, 0.5);
+		}
+		.menu{
+			position: absolute;
+			right: 0;
+		}
+		.header-top{
+			background-image: url(images/slide.jpg);
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			height: 496px;
+			width: 100%;
+			position: relative;
+			z-index: -3;
+		}
+		
+		.header-btn{
+			position: relative;
+			top: -40px;
+		}
+		.item-group{
+			height: 265px;
+			display: flex;			
+			justify-content: center;
+			width: 100%;
+		}
+		.item{
+			width: 260px;
+			height: 260px;
+			display: flex;
+			position: relative;
+  			overflow: hidden;
+  			border: 1px solid #fff;
+  			text-decoration:none;
+		}
+		.item-img{
+			-webkit-background-size: cover;
+			background-position: center center;
+			background-size: cover;
+			background-position: center center;
+			position: absolute;
+			left: -10px;
+			bottom: -10px;
+			top: -10px;
+			right: -10px;
+			z-index: -2;
+			-webkit-filter: blur(3px);
+		}
+		.item-bg{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			top: 0;
+			right: 0;
+			background-color: rgba(63, 124, 75, 0.8);
+			z-index: -1;
+		}
+		.text{
+			width: 100%;
+			height: 100%;
+			display:-webkit-box;
+			-webkit-box-pack:center;
+			-webkit-box-align:center;
+			transition: all 0.3s;
+			color: #fff;
+		}
+		.item:hover{
+			background: rgba(255, 225, 128,.8);
+			color: #3f5d45;
+			text-decoration:none;
+		}
+		.item .text:hover{
+			color: #3f5d45;
+		}
+		.text p{
+			-webkit-writing-mode: vertical-rl;
+			-ms-writing-mode: tb-rl;
+			writing-mode: vertical-rl;
+			-webkit-box-align:center;
+			-webkit-box-pack:center;
+			text-align: center;
+			letter-spacing: 10px;
+			cursor: pointer;
+			font-size: 100%;
+			margin: auto;
+			text-decoration:none;
+		}
+
+		.item-group .item:nth-child(1) .item-img{
+			background-image: url(images/item1.jpg);
+		}
+		.item-group .item:nth-child(2) .item-img{
+			background-image: url(images/item2.jpg);
+		}
+		.item-group .item:nth-child(3) .item-img{
+			background-image: url(images/item3.jpg);
+		}
+		/*header-end*/
+
+		/*content*/
+		.content{
+			display: flex;
+			background-color: #EAF0ED;
+			margin-bottom: 100px;
+		}
+		.content-text{
+			padding: 0 15px;
+			height: 460px;
+			width: 50%;
+			display: flex;
+		}
+		
+		.content-pic-1{
+			background-image: url(images/reason2.jpg);
+			background-position: center center;
+			background-size:cover;
+			padding: 0 15px;
+			height: 460px;
+			width: 50%;
+			position: relative;
+			top: -20px;
+			left: 20px;
+		}
+		.content-text p{
+			line-height: 30px;
+			writing-mode: vertical-rl;
+			font-size: 16px;
+			margin: 50px 30px 30px 30px;
+			color: #8DA291;
+		}
+		.content-text .title{
+			-webkit-writing-mode: vertical-rl;
+			-ms-writing-mode: tb-rl;
+			writing-mode: vertical-rl;
+			font-size: 	35px;
+			color: #3F5D45;		
+		}
+		.content-pic-2{
+			background-image: url(images/reason3.jpg);
+			background-position: center center;
+			background-size:cover;
+			padding: 0 15px;
+			height: 460px;
+			width: 50%;
+			position: relative;
+			top: -20px;
+			right: 20px;
+		}
+
+
+
+		/*content-center*/
+		.content-center{
+			padding: 0 15px;
+			writing-mode: vertical-rl;
+			margin: 0 auto 1.5rem auto;
+		}
+		.center-dt{
+			margin: 0 auto;
+		    font-size: 35px;
+		    color: #3F5D45;
+		    font-weight: 700;
+		}
+		.title-b{
+			margin-top: 3rem;
+			margin-right: 3rem;
+		}
+		/*content-center end*/
+		
+
+		/*cart*/
+		.row .cart:nth-child(1) .cart-img{
+			background-image: url(images/topic_4.jpg);
+		}
+		.row .cart:nth-child(2) .cart-img{
+			background-image: url(images/topic_5.jpg);
+		}
+		.row .cart:nth-child(3) .cart-img{
+			background-image: url(images/topic_1.jpg);
+		}
+		.cart-group{
+			width: 100%;
+		}
+		.cart{
+			box-sizing: border-box;
+			flex-direction: column;
+			padding: 0 15px;
+		}
+		.cart-img{
+			height: 316px;
+			-webkit-background-size: cover;
+			background-position: center center;
+			background-size: cover;
+			background-position: center center;
+		}
+		.cart-dt{
+			display: flex;
+			width: 100%;
+		}
+		.dt-name{
+			color: #3F5D45;
+			text-align: center;
+			width: 50%;
+			font-size: 20px;
+		}
+		.dt-price{
+			font-size: 20px;
+			color: #3F5D45;
+			text-align: center;
+			width: 50%;
+		}
+		.cart-btn{
+			height: 65px;
+			width: 100%;
+			text-align: center;
+			
+			align-items: center;
+			font-size: 24px;
+			
+			margin-bottom: 40px;
+		}
+		.addbtn{
+			width: 100%;
+			color: #3F5D45;
+			font-weight: bold;
+			border: none;
+		}
+
+		/*subscript*/
+		.subscript{
+			background-color: #3F5D45;
+			
+		}
+		.subtitle{
+			height: 116px;
+			width: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;			
+			color: #EAF0ED;
+		}
+		.sub-logo{
+		}
+		.subtext{
+			margin-left: 20px;
+			font-size: 24px;
+			text-align: center;
+			vertical-align: middle;
+		}
+		.sub-input{
+			text-align: center;
+			display: flex;
+			width: auto;
+			height: 56px;
+			background-color: #fff;
+			margin: auto;
+			border: 0px;
+
+		}
+		.mail, .arrow{
+			line-height: 24px;
+			font-size: 24px;
+			color: #3F5D45;
+			margin: 15px;
+			border: none;
+		}
+		.email-input{
+			border: none;
+		}
+		.icon{
+			background-color: #FFE180;
+			border: none;
+		}
+		
+		
+
+
+		.footer-img{
+			width: 100%;
+		}
+		.align{
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+		.footer-logo{
+			background-image: url(images/logotype.png);
+			background-position:center center;
+			background-size: cover;
+			margin-top: 25px;
+			margin-bottom: 1rem;
+			width: 172px;
+			height: 27px;
+		}
+		/*.footer-logoimg{
+			display: block;
+			margin: auto;
+			height: 60px;
+		}*/
+		
+		.footer-imgce{
+			padding-top: 15px;
+			display: block;
+			margin: auto;
+			width: 60px;
+		}
+		.footer-phone{
+			width: 230px;
+			margin-top: 40px;
+			
+		}
+		.footer-text{
+			color: #3F5D45;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		.fb{
+			display: inline-block;
+			width: auto;
+		}
+		.fb-icon{
+			width: 32px;
+		}
+		.fb-copytight{
+			font-size: 16px;
+			color: #3F5D45;
+			text-align: left;
+		}/*
+		.ul-menu{
+			position: absolute;
+			right: 40px;
+		}*/
+		@media screen and (max-width: 767px){
+			.content{
+				display: block;
+			}
+			.content .content-pic-1{
+				display: block;
+				width: 100%;
+			}
+			.content .content-text{
+
+				width: 100%;
+			}
+			.content .content-pic-2{
+				display: block;
+				width: 100%;
+			}
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <a class="navbar-brand logo" href="#">
+		 	<img src="images/logo-all-dark.png" alt="" class="navlogo-img">
+		  </a>
+
+		  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+		    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">甜點</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">登入</a>
+		      </li>
+		    </ul>		    
+		  </div>
+		</nav>-->
+
+
+		<nav class="navbar navbar-expand-lg navbar-light">
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <a class="navbar-brand navlogo-img" href="#">
+			<img src="images/logo-all-dark.png" alt="" class="a-img">
+		  </a>
+		  <a href="cart.php" class="menu-cart-icon">
+		  	<i class="fas fa-shopping-cart"></i>
+		  </a>
+
+		  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+		    <ul class="navbar-nav  ml-auto mr-4">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="index.html">首頁 <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="product.html">甜點</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="login.html">登入</a>
+		      </li>
+		    </ul>
+		    
+		  </div>
+		</nav>
+
+
+		<div class="header">
+			<div class="header-top"></div>
+
+
+			<div class="header-btn">
+				<div class="item-group">
+					<a href="#" class="item">
+						<div class="item-bg"></div>					
+						<div class="item-img"></div>						
+						<div class="text"><p>本日精選</p></div>
+					</a>
+					<a href="#" class="item">
+						<div class="item-bg"></div>
+						<div class="item-img"></div>
+						
+						<div class="text"><p>人氣商品</p></div>
+					</a>
+					<a href="#" class="item">
+						<div class="item-bg"></div>
+						<div class="item-img"></div>
+						
+						<div class="text"><p>新品上市</p></div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="content">
+			<div class="content-pic-1"></div>
+			<div class="content-text">
+				
+				<p>一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。<br>青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
+				<p>是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
+				<div class="title">選擇做甜點</div>
+				<div class="title" style="margin-top:-15px;">為什麼</div>
+				
+			</div>
+		</div>
+
+		<div class="content">
+			
+			<div class="content-text">
+				
+				<p>一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。<br>青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
+				<p>是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
+				<div class="title">一定要吃甜點</div>
+				<div class="title" style="margin-top:-15px;">為什麼</div>
+				
+			</div>
+			<div class="content-pic-2">
+				
+			</div>
+		</div>
+
+		<div class="content-center">
+			<div class="center-dt">
+				<div class="title">想吃甜點</div>
+				<div class="title title-b">是不需要理由的</div>			
+			</div>
+						
+		</div>
+
+
+		<div class="cart-group">
+			<div class="row">
+				<div class="col-md-4 cart">
+					<div class="cart-img"></div>
+					<div class="cart-dt">
+						<p class="dt-name">焦糖馬卡龍</p>
+						<p class="dt-price">NT$ 450</p>
+					</div>
+					<div class="cart-btn">
+						<button class="addbtn">加入購物車</button>
+					</div>
+				</div>
+				<div class="col-md-4 cart">
+					<div class="cart-img"></div>
+					<div class="cart-dt">
+						<p class="dt-name">焦糖馬卡龍</p>
+						<p class="dt-price">NT$ 450</p>
+					</div>
+					<div class="cart-btn">
+						<button class="addbtn">加入購物車</button>
+					</div>
+				</div>
+				<div class="col-md-4 cart">
+					<div class="cart-img"></div>
+					<div class="cart-dt">
+						<p class="dt-name">焦糖馬卡龍</p>
+						<p class="dt-price">NT$ 450</p>
+					</div>
+					<div class="cart-btn">
+						<button class="addbtn">加入購物車</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<div class="subscript">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 subtitle">
+						<img src="images/logo-light.png" style="width: 40px;height: 40px;" class="sub-logo" alt="">
+						<span class="subtext">訂閱你我的甜蜜郵件</span>
+					</div>
+
+
+					<div class="col-md-6 subtitle">
+						<div class="sub-input">
+							
+							<div class="email">
+								<i class="fas fa-envelope mail"></i>
+							</div>
+							<input type="text" class="email-input">
+							<button class="icon">
+								<i class="fas fa-arrow-left arrow"></i>
+							</button>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 align ">
+						<div class="footer-logo">
+							<!--<img src="images/logotype.png" alt="" class="footer-logoimg">-->
+						</div>
+						<div class="footer-phone">
+							<p class="footer-text">07-1234-5678</p>
+							<a href=""  class="footer-text">sweetaste@email.com</a>
+							<p class="footer-text">800 高雄市新興區幸福路520號</p>
+						</div>
+					</div>
+
+
+					<div class="col-6 footer-img">
+						<img src="images/sm-今天是個吃甜點的好日子.png" alt="" class="footer-imgce">
+					</div>
+				</div>
+
+
+				<div class="footer-copyright row">
+					<div class="col-6 fb">
+						<img src="images/ic-line.png" alt="" class="fb-icon">
+						<img src="images/ic-facebook.png" alt="" class="fb-icon">
+					</div>
+					<div class="col-6">
+						<p class="fb-copytight">© 2018 Sweetaste* All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Document</title>
+	<script src="https://kit.fontawesome.com/094337ecc6.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		*{
+			vertical-align: middle;
+		}
+		img{
+			width: 100%;
+		}
+		.logo{
+			height: 50px;
+			width: 220px;
+			font-size: 30px;
+		}
+		.a-img{
+			width: 100%;
+		}
+		.navlogo-img{
+			width: 220px;
+			height: 50px;
+		}
+		.nav-item{
+			
+			font-size: 16px;
+			margin: 0 20px;
+		}
+		.menu-cart-icon{
+			align-items: center;
+			font-size: 24px;
+			color: #3F5D45;
+			position: absolute;
+			right: 10px;
+		}
+		
+		.nav-link{
+			color: rgba(63, 93, 69, 0.5);
+		}
+		.menu{
+			position: absolute;
+			right: 0;
+		}
+		
+
+		
+		
+
+
+
+
+		/*subscript*/
+		.subscript{
+			background-color: #3F5D45;
+			
+		}
+		.subscript .subtitle{
+			height: 116px;
+			width: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;			
+			color: #EAF0ED;
+		}
+		.subscript .subtitle .sub-logo{
+		}
+		.subscript .subtitle .subtext{
+			margin-left: 20px;
+			font-size: 24px;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+
+		.subscript .subtitle .sub-input{
+			text-align: center;
+			display: flex;
+			width: auto;
+			height: 56px;
+			background-color: #fff;
+			margin: auto;
+			border: 0px;
+		}
+		.mail, .arrow{
+			line-height: 24px;
+			font-size: 24px;
+			color: #3F5D45;
+			margin: 15px;
+			border: none;
+		}
+		.subtitle .sub-input .email-input{
+			border: none;
+		}
+		.subtitle .sub-input .icon{
+			background-color: #FFE180;
+			border: none;
+		}
+		
+		.row .footer-img{
+			width: 100%;
+		}
+		.row .align{
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+		.row .align .footer-logo{
+			background-image: url(images/logotype.png);
+			background-position:center center;
+			background-size: cover;
+			margin-top: 25px;
+			margin-bottom: 1rem;
+			width: 172px;
+			height: 27px;
+		}
+		.row .align .footer-phone{
+			width: 230px;
+			margin-top: 40px;
+			
+		}
+		.footer-phone .footer-text{
+			color: #3F5D45;
+			font-weight: bold;
+			margin: 0;
+		}
+		.row .footer-img .footer-imgce{
+			padding-top: 15px;
+			display: block;
+			margin: auto;
+			width: 60px;
+		}		
+		
+
+		.footer-copyright .fb{
+			display: inline-block;
+			width: auto;
+		}
+		.fb .fb-icon{
+			width: 32px;
+		}
+		.fb-copytight{
+			font-size: 16px;
+			color: #3F5D45;
+			text-align: left;
+		}
+
+		.cart-all{
+			display: flex;
+			align-items: flex-start;
+		}
+		.cart-items{
+			margin-right: 20px;
+			width: 70%;
+		}
+		.cart-text{
+			flex: 1;
+			height: auto;
+			width: 30%;
+			background-color: #3f5d45;
+			color: #eaf0ed;
+		}
+
+		.cart-items-title{
+			font-size: 1.5rem;
+			color: #3f5d45;
+			background-color: #eaf0ed;
+			text-align: center;
+			padding: 15px 0;
+			margin-bottom: 20px;
+		}
+
+/*cart-items*/		
+table{
+	width: 100%;
+	margin: auto;
+	display: table;
+	border-spacing: 20px;
+	border-collapse: collapse;
+}
+tr{
+	height: 130px;
+}
+td{
+	padding: 0 10px;
+	text-align: center;
+}
+img{
+	width: 100%;
+}
+.item-img{
+	width: 110px;
+}
+.item-title{
+	font-size: 1.25rem;
+	text-align: center;
+	padding: 10px 0;
+}
+.item-piece{
+	height: auto;
+	width: auto;
+	text-align: center;
+	justify-content: center;
+}
+
+.item-piece *{
+	height: 50px;
+	display: inline-block;
+	width: 50px;
+}
+.item-piece span{
+	border: 1px solid #ccc;
+	cursor: pointer;
+	text-align: center;
+}
+.item-piece input{
+	border: 1px solid #ccc;
+	text-align: center;
+	outline: none;
+}
+.item-price p{
+	font-size: 20px;
+	margin-bottom: 0;
+}
+.item-delete i{
+	cursor: pointer;
+}
+
+/*cart-text*/
+
+.cart-text-title{
+	width: 80%;
+	text-align: center;
+	border-bottom: 1px solid #000;
+	padding: 15px 0;
+	margin: 15px auto;	
+}
+.text-price{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+.text-fee{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+.text-total{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+.text-check{
+	text-align: center;
+	width: 100%;
+}
+.text-check .check-a{
+	width: 100%;
+
+}
+.text-check a .check-txt{
+	font-size: 1.5rem;
+	background-color: #ffe180;
+	color: #3f5d45;
+	margin: 0;
+	padding: 5px 0;
+}
+		@media screen and (max-width: 767px){
+			.cart-all{
+				display: block;
+			}
+			.cart-items{
+				width: 100%;
+			}
+			.cart-text{
+				width: 100%;
+			}
+			tr{
+				margin-bottom: 10px;
+				height: auto;
+				display: block;
+				position: relative;
+			}
+			td{
+				display: block;
+			}
+			.item-img{
+				display: inline-block;
+			}
+			.item-title{
+				width: 30%;
+				font-size: 15px;
+				display: inline-block;
+			}
+			.item-piece{
+				position: absolute;
+				top: 25%;
+				left: 60%;
+				display: block;
+			}
+			.item-piece *{
+				line-height: 30px;
+				width: 30px;
+				height: 30px;
+			}
+			.item-price{
+				border-bottom: 1px solid #ccc;
+				border-top: 1px solid #ccc;
+				width: 100%;
+				display: inline-block;
+				text-align: right;
+			}
+			.item-delete{
+				display: none;
+			}
+
+
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light">
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <a class="navbar-brand navlogo-img" href="#">
+			<img src="images/logo-all-dark.png" alt="" class="a-img">
+		  </a>
+		  <a href="cart.php" class="menu-cart-icon">
+		  	<i class="fas fa-shopping-cart"></i>
+		  </a>
+
+		  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+		    <ul class="navbar-nav  ml-auto mr-4">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="index.html">首頁 <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="product.html">甜點</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="login.html">登入</a>
+		      </li>
+		    </ul>
+		    
+		  </div>
+		</nav>
+
+		
+
+
+		<!--cart-->
+		<div class="cart-all">
+			<div class="cart-items">
+				<div class="cart-items-title">您的購物車</div>
+				<div class="item-group">
+					
+					<div class="item">
+						<table>
+							<tr>
+								<td class="item-img"><img src="images/item1.jpg" alt=""></td>
+								<td class="item-title">
+									<p>焦糖馬卡龍</p>
+									<p>NT$200</p>
+								</td>
+								<td class="item-piece">
+									<span>-</span>
+									<input type="number" value="2">
+									<span>+</span>
+								</td>
+								<td class="item-price"><p>NT$200</p></td>
+								<td class="item-delete">
+									<i class="far fa-trash-alt"></i>
+								</td>
+							</tr>
+							<tr>
+								<td class="item-img"><img src="images/item1.jpg" alt=""></td>
+								<td class="item-title">
+									<p>焦糖馬卡龍</p>
+									<p>NT$200</p>
+								</td>
+								<td class="item-piece">
+									<span>-</span>
+									<input type="number" value="2">
+									<span>+</span>
+								</td>
+								<td class="item-price"><p>NT$200</p></td>
+								<td class="item-delete">
+									<i class="far fa-trash-alt"></i>
+								</td>
+							</tr>
+							<tr>
+								<td class="item-img"><img src="images/item1.jpg" alt=""></td>
+								<td class="item-title">
+									<p>焦糖馬卡龍</p>
+									<p>NT$200</p>
+								</td>
+								<td class="item-piece">
+									<span>-</span>
+									<input type="number" value="2">
+									<span>+</span>
+								</td>
+								<td class="item-price"><p>NT$200</p></td>
+								<td class="item-delete">
+									<i class="far fa-trash-alt"></i>
+								</td>
+							</tr>
+						</table>
+
+					</div>
+					
+				</div>
+			</div>
+			<div class="cart-text">
+				<div class="cart-text-title"><h2>訂單摘要</h2></div>
+				<div class="text-price">
+					<span>小計</span>
+					<span>NT$2700</span>
+				</div>
+				<div class="text-fee">
+					<span>運費</span>
+					<span>NT$300</span>
+				</div>
+				<div class="text-total">
+					<span>小計</span>
+					<span>NT$2700</span>
+				</div>
+				<div class="text-check">
+					<a href="checkout_1.html" class="check-a"><p class="check-txt">結帳</p></a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+
+<div class="subscript">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 subtitle">
+						<img src="images/logo-light.png" style="width: 40px;height: 40px;" class="sub-logo" alt="">
+						<span class="subtext">訂閱你我的甜蜜郵件</span>
+					</div>
+
+
+					<div class="col-md-6 subtitle">
+						<div class="sub-input">
+							
+							<div class="email">
+								<i class="fas fa-envelope mail"></i>
+							</div>
+							<input type="text" class="email-input">
+							<button class="icon">
+								<i class="fas fa-arrow-left arrow"></i>
+							</button>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 align ">
+						<div class="footer-logo">
+							<!--<img src="images/logotype.png" alt="" class="footer-logoimg">-->
+						</div>
+						<div class="footer-phone">
+							<p class="footer-text">07-1234-5678</p>
+							<a href=""  class="footer-text">sweetaste@email.com</a>
+							<p class="footer-text">800 高雄市新興區幸福路520號</p>
+						</div>
+					</div>
+
+
+					<div class="col-6 footer-img">
+						<img src="images/sm-今天是個吃甜點的好日子.png" alt="" class="footer-imgce">
+					</div>
+				</div>
+
+
+				<div class="footer-copyright row">
+					<div class="col-6 fb">
+						<img src="images/ic-line.png" alt="" class="fb-icon">
+						<img src="images/ic-facebook.png" alt="" class="fb-icon">
+					</div>
+					<div class="col-6">
+						<p class="fb-copytight">© 2018 Sweetaste* All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
